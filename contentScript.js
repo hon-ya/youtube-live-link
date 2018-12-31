@@ -8,7 +8,7 @@ const init = async() => {
 
   let liveUrlStr = `
     <div style="font-size: 16px; width: 36px; height: 24px; margin: 10px 0px;">
-      <a id="yll-link" href="${location.href}/live">/live</a>
+      <a id="yll-link" href="${location.pathname}/live">/live</a>
     </div>
   `;
   let liveUrl = createElementFromHTML(liveUrlStr);
@@ -17,7 +17,7 @@ const init = async() => {
   buttonRenderer.appendChild(liveUrl);
 
   (document.body || document.documentElement).addEventListener('transitionend', () => {
-    liveUrl.querySelector("#yll-link").href = `${location.href}/live`;
+    liveUrl.querySelector("#yll-link").href = `${location.pathname}/live`;
   });
 };
 init();
