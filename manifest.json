@@ -10,7 +10,7 @@
         "run_at": "document_end",
         "all_frames": true,
         "matches": [
-          "https://*.youtube.com/channel/*"
+          "https://*.youtube.com/*"
         ],
         "js": ["contentScript.js"]
       }
